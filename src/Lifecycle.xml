@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+      >
+   
+   <bean id="obj" class="com.BeanLifeCycleDemo.LifeCycle" init-method="Init"  destroy-method="Destroy">
+   	<property name="name" value="Prasanna"/>
+   </bean>
+   
+   <bean id="obj1" class="com.BeanLifeCycleDemo.LifeCycle" destroy-method="Destroy">
+   	<property name="name" value="Bujji"/>
+   </bean>
+   
+    <bean id="obj2" class="com.BeanLifeCycleDemo.LifeCycle" destroy-method="Destroy">
+   	<property name="name" value="Lakshmi"/>
+   </bean>
+   
+   <bean id="obj3" class="com.BeanLifeCycleDemo.JavaBasedLifeCycle"  >
+
+   </bean>
+</beans>

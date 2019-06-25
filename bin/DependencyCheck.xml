@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+  <bean id="Customerobj" class="com.DependecyCheck.Customer" dependency-check="simple">
+  	<property name="person" ref="myperson" />
+    <property name="type" value="1"/>
+  	<property name="action" value="buyer"/>
+  </bean>
+  <bean id="myperson" class="com.DependecyCheck.Person">
+  	<property name="name" value="hari"/>
+  	<property name="age" value="24"/>
+  	<property name="address" value="vizag"/>
+  </bean>	
+  	
+
+
+</beans>
